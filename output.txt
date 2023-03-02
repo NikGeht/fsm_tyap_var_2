@@ -2,11 +2,11 @@ TABLE OF NAMES:
 COST- variable
 PRICE- variable
 TAX- variable
-1.E-10 - float constant
+5001 - integer constant
 LEKSEMS: 
-['COST', '=', '(', 'PRICE', '+', 'TAX', ')', '*', '1.E-10']
+['COST', '=', '(', 'PRICE', '+', 'TAX', ')', '*', '5001']
 RAW CODE:
-LOAD 1.E-10
+LOAD 5001
 STORE $2
 LOAD TAX
 STORE $1
@@ -17,5 +17,5 @@ STORE COST
 OPTIMIZED CODE:
 LOAD TAX
 ADD PRICE
-MPY  1.E-10
+MPY  5001
 STORE COST

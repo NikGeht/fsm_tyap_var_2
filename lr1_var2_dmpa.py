@@ -113,10 +113,11 @@ for char in text:
         break
 output_file.write("TABLE OF NAMES:\n")
 for elem in leksem:
-    if str(elem)[0].isdigit() and str(elem).find("."):
-        output_file.write(str(elem) + " - float constant\n")
-    elif str(elem)[0].isdigit() and not str(elem).find("."):
-        output_file.write(str(elem) + " - integer constant\n")
+    if str(elem)[0].isdigit():
+        if str(elem).find(".") == -1:
+            output_file.write(str(elem) + " - integer constant\n")
+        else:
+            output_file.write(str(elem) + " - float constant\n")
     if str(elem)[0].isalpha():
         output_file.write(str(elem) + "- variable\n")
 output_file.write("LEKSEMS: \n" + str(leksem) + "\n")
